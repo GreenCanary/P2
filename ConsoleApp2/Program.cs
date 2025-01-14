@@ -1,64 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using ConsoleApp2;
 namespace AnimalHierarchy
 {
-    public class Animal
-    {
-        public string Name { get; set; }
-        public int Age { get; set; }
-
-        public Animal(string name, int age)
-        {
-            Name = name;
-            Age = age;
-        }
-        public virtual void Show()
-        {
-            Console.WriteLine($"Animal: {Name}, Age: {Age}");
-        }
-        public virtual void Voice()
-        {
-            Console.WriteLine("Moo");
-        }
-    }
-    public class Dog : Animal
-    {
-        private string Nickname { get; set; }
-        public Dog(string name, int age, string nickname)
-            : base(name, age)
-        {
-            Nickname = nickname;
-        }
-        public override void Show()
-        {
-            Console.WriteLine($"Dog: {Name}, Age: {Age}, Nickname: {Nickname}");
-        }
-        public override void Voice()
-        {
-            Console.WriteLine("Bark");
-        }
-    }
-    public class Cat : Animal
-    {
-        private string Color { get; set; }
-
-        public Cat(string name, int age, string color)
-            : base(name, age)
-        {
-            Color = color;
-        }
-
-        public override void Show()
-        {
-            Console.WriteLine($"Cat: {Name}, Age: {Age}, Color: {Color}");
-        }
-
-        public override void Voice()
-        {
-            Console.WriteLine("Meow");
-        }
-    }
+    
     class Program
     {
         static void Main(string[] args)
